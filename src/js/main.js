@@ -1,9 +1,10 @@
 'use strict';
-window.app = window.app || {};
+window.App = window.App || {};
 
-(function (app) {
-	var ItemList = new app.ItemList([]);
+(function (App) {
+	var listComponent = App.Components.ListItems;
+	var List = new listComponent.List([]);
 
 	//Inject the dependency
-	app.listItemsRender.initialize(ItemList);
-}(window.app));
+	listComponent.ListRender.initialize(List);
+}(window.App));

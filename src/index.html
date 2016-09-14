@@ -15,17 +15,18 @@
 
     <div class="list-container">
         <h2>GFT List App!</h2>
-        <input type="text" id="newItem">
-        <button id="addItem">Add</button>
-        <div class="list-items">
-
-        </div>
+        <form class="list-form" novalidate>
+            <input type="text" id="newItem" autofocus="true">
+            <button id="addItem" type="submit">Add</button>
+        </form>
+        <ul class="list-items"></ul>
         <div class="list-count"></div>
     </div>
 
-    <script src="js/items/listItemsRender.js"></script>
-    <script src="js/items/listItems.js"></script>
-    <script src="js/items/item.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components/listItems/listRender.js"></script>
+    <script src="js/components/listItems/list.js"></script>
+    <script src="js/components/listItems/item.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
