@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 h2 {
@@ -12,8 +12,11 @@ h2 {
     font-variant: small-caps;
     text-transform: uppercase;
     font-weight: 200;
-    text-align: center;
     color: #ec0000;
+}
+
+h2, form {
+    text-align: center;
 }
 
 button {
@@ -40,6 +43,7 @@ button {
     width: 40%;
     max-height: 70%;
     overflow: auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .delete {
@@ -69,4 +73,13 @@ button {
 
 .list-count {
     position: relative;
+}
+
+#addItem {
+    background-color: #FF851B;
+}
+
+#reset {
+    background: #FFFBD0;
+    color: #3c3838;
 }
