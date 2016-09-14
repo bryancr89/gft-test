@@ -3,8 +3,10 @@ var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', '
 
 (function (namespace) {
 
-	var Item = function (name) {
+	var Item = function (name, description, price) {
 		this.name = name;
+		this.description = description || '';
+		this.price = price || 0;
 		this.rendered = false;
 	};
 
@@ -20,8 +22,20 @@ var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', '
 		return this.name === itemName;
 	};
 
-	Item.prototype.getContent = function () {
+	Item.prototype.getName = function () {
 		return this.name;
+	};
+
+	Item.prototype.getPrice = function () {
+		return this.price;
+	};
+
+	Item.prototype.getContent = function () {
+		return this.name + ' - $' + this.price;
+	};
+
+	Item.prototype.getDescription = function () {
+		return this.description;
 	};
 
 	namespace.Item = Item;
