@@ -80,7 +80,10 @@ var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', '
 		var itemPrice = item.getPrice();
 		var itemDescription = item.getDescription();
 		var deleteBtn = Utils.createHTMLElement('button', {
-				innerText: 'Delete'
+				innerText: 'Delete',
+				attributes: {
+					'class': 'delete'
+				}
 			}),
 			newContent = document.createTextNode(itemContent),
 			beforeNode = Utils.getNodeToInsertBefore(container.childNodes, itemPrice),
@@ -142,7 +145,7 @@ var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', '
 		Object.keys(listeners).forEach(function (listenerKey) {
 			listeners[listenerKey]();
 		});
-		updateListCount();
+		render();
 	};
 
 }(namespace, App.Utils));

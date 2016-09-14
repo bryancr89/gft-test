@@ -9,6 +9,7 @@ var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', '
 		this.selectedCategory = data.categories[0].id;
 
 		this.productsOrderByCategory = orderProductsByCategory(this.categories, this.products);
+		this.items = sortItems(this.productsOrderByCategory[this.selectedCategory]);
 	};
 
 	List.prototype.addItem = function (item) {
