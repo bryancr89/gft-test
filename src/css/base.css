@@ -1,0 +1,23 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    padding-top: 5%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}

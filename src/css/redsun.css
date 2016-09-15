@@ -1,12 +1,3 @@
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
-body {
-    padding-top: 5%;
-}
-
 h2 {
     font-family: Tahoma, Geneva, sans-serif;
     font-variant: small-caps;
@@ -38,12 +29,21 @@ button {
 .list-container {
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 0 auto;
     padding: 10px;
-    width: 40%;
-    max-height: 70%;
     overflow: auto;
+    max-height: 70%;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.list-container, .coverage {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.coverage {
+    display: block;
+    margin-top: 5px;
+    text-align: right;
 }
 
 .delete {

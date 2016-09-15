@@ -102,7 +102,7 @@ var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', '
 	}
 
 	function clearList(container) {
-		while (container.hasChildNodes()) {
+		while (container && container.hasChildNodes()) {
 			container.removeChild(container.lastChild);
 		}
 	}
