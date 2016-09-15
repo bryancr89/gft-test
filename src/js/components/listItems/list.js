@@ -2,11 +2,18 @@
 var namespace = window.App.Utils.createNamespace(window, ['App', 'Components', 'ListItems']);
 
 (function (namespace) {
+	var customCategory = {
+		name: 'Custom',
+		id: 0,
+		products: []
+	};
+
 	var List = function (data) {
+
 		this.items = data.items;
-		this.categories = data.categories;
+		this.categories = data.categories || [customCategory];
 		this.products = data.products;
-		this.selectedCategory = data.categories[0].id;
+		this.selectedCategory = this.categories[0].id;
 
 		this.productsOrderByCategory = orderProductsByCategory(this.categories, this.products);
 		this.items = sortItems(this.productsOrderByCategory[this.selectedCategory]);

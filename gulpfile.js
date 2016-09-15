@@ -2,7 +2,6 @@ var fs = require('fs');
 var path = require('path');
 
 var gulp = require('gulp');
-var mocha = require('gulp-mocha');
 var connect = require('gulp-connect');
 var istanbul = require('gulp-istanbul');
 

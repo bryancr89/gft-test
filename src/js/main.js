@@ -4,15 +4,10 @@ window.App = window.App || {};
 (function (App) {
 	function initializeApp(data) {
 		var listComponent = App.Components.ListItems;
-		var customCategory = {
-			name: 'Custom',
-			id: 0,
-			products: []
-		};
 
 		var List = new listComponent.List({
 			items: [],
-			categories: data.categories || [customCategory],
+			categories: data.categories,
 			products: data.products || []
 		});
 
@@ -20,8 +15,10 @@ window.App = window.App || {};
 		listComponent.ListRender.initialize(List);
 	}
 
-	App.Utils.getAll({
-		categories: '/services/categories/categories.json',
-		products: '/services/products/products.json'
-	}, initializeApp);
+	App.initialize = function () {
+		App.Utils.getAll({
+			categories: '/services/categories/categories.json',
+			products: '/services/products/products.json'
+		}, initializeApp);
+	};
 }(window.App));

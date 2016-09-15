@@ -5,13 +5,13 @@ window.App = window.App || {};
 	App.Utils = {};
 
 	App.Utils.createNamespace = function createNamespace(namespace, namespaceList) {
-		if(namespaceList.length === 0) {
-			return namespace;
-		}
-		var element = namespaceList.shift();
-		namespace[element] = namespace[element] || {};
+		var currentItem = namespace;
+		namespaceList.forEach(function (item) {
+			currentItem[item] = currentItem[item] || {};
+			currentItem = currentItem[item];
+		});
 
-		return createNamespace(namespace[element], namespaceList);
+		return currentItem;
 	};
 
 	App.Utils.getJson = function (url, callback) {
